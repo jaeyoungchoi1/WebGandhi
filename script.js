@@ -1,21 +1,36 @@
-document.getElementById('ghandiBtn').addEventListener('click', function() {
-    chrome.tabs.executeScript({
-        code: 'document.body.innerHTML;'
-    }, function(selection) {
-        const content = selection[0];
-
-        // OpenAI API 호출 코드
-        filterHateWords(content, function(filteredContent) {
-            // 웹 페이지 내용을 필터링된 내용으로 업데이트
-            chrome.tabs.executeScript({
-                code: `document.body.innerHTML = \`${filteredContent}\`;`
-            });
-        });
+document.getElementById('saveKeyBtn').addEventListener('click', function() {
+  const apiKey = document.getElementById('apiKey').value;
+  if (apiKey) {
+    chrome.storage.local.set({ 'openAIKey': apiKey }, function() {
+      console.log('API Key saved');
+      toggleVisibility();
     });
+  } else {
+    alert('Please enter the API key.');
+  }
 });
 
-function filterHateWords(content, callback) {
-    // OpenAI API 호출 및 응답 처리 로직
-    // ...
-    // callback(filteredContent);
+document.getElementById('ghandiBtn').addEventListener('click', function() {
+  chrome.storage.local.get('openAIKey', function(data) {
+    if (data.openAIKey) {
+      // TODO: 사용자가 입력한 API 키를 사용해서 필터링 작업 진행
+    } else {
+      alert('API key is not set.');
+    }
+  });
+});
+
+function toggleVisibility() {
+  const apiKeyForm = document.getElementById('api-key-form');
+  const mainContent = document.getElementById('main-content');
+
+  apiKeyForm.style.display = 'none';
+  mainContent.style.display = 'block';
 }
+
+// 페이지 로드 시 API 키가 저장되어 있으면 메인 콘텐츠를 바로 보여줍니다.
+chrome.storage.local.get('openAIKey', function(data) {
+  if (data.openAIKey) {
+    toggleVisibility();
+  }
+});
