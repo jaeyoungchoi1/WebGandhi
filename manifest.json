@@ -4,7 +4,7 @@
   "version": "1.0",
   "description": "Detects and filters hate words in online content.",
   "permissions": ["activeTab", "storage"],
-  icon": {
+  "icon": {
     "16": "images/icon16.png",
     "32": "images/icon32.png",
     "48": "images/icon48.png",
