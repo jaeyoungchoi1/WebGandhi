@@ -2,6 +2,7 @@ function findTextNodes(element) {
   let textNodes = [];
   if (element.nodeType == 3) { // text
     textNodes.push(element);
+    console.log(element);
   } else {
     element.childNodes.forEach(child => {
       textNodes = textNodes.concat(findTextNodes(child));
