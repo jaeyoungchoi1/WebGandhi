@@ -4,4 +4,6 @@ document.getElementById('startBtn').addEventListener('click', function() {
     chrome.tabs.sendMessage(tabs[0].id, {action: "startSanitizing"});
   });
   console.log("start!");
+
+  
 });
