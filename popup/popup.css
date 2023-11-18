@@ -1,0 +1,22 @@
+#api-key-form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#apiKey {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+#saveKeyBtn {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#main-content {
+  text-align: center;
+  margin-top: 20px;
+}
