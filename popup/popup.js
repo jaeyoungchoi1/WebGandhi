@@ -8,7 +8,7 @@ document.getElementById('startBtn').addEventListener('click', function() {
   
 });
 
-/*
+
 document.getElementById('startBtn').addEventListener('click', function() {
   // Naver Hyperclova API 요청 설정
   var xhr = new XMLHttpRequest();
@@ -32,4 +32,3 @@ document.getElementById('startBtn').addEventListener('click', function() {
   xhr.send(data); // 데이터와 함께 요청 보내기
   console.log("start!");
 });
-*/
