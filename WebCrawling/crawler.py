@@ -16,7 +16,7 @@ driver = webdriver.Chrome(service=service)
 
 # 웹사이트에서 HTML 가져오기
 #url = 'https://gall.dcinside.com/board/view/?id=baseball_new11&no=10571167'
-board_url = 'https://gall.dcinside.com/board/lists/?id=baseball_new11&page=5&exception_mode=recommend&list_num=100'
+board_url = 'https://gall.dcinside.com/board/lists/?id=leagueoflegends5&page=15&exception_mode=recommend'
 driver.get(board_url)
 
 wait = WebDriverWait(driver, 5)
