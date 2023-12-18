@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TextNodeFilter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div class="popup-container">
+  <h1>WebGandhi</h1>
+  <p>This service is for filtering hate speeches on the web</p>
+
+  <div class="radio-group">
+    <input type="radio" id="neutral" name="filterType" checked>
+    <label for="neutral">Neutral</label>
+
+    <input type="radio" id="pure" name="filterType">
+    <label for="pure">Pure</label>
+  </div>
+
+  <button id="startButton">Start Filter</button>
+  <button id="resetButton">Reset</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="popup.js"></script>
+</body>
+</html>

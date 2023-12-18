@@ -1,0 +1,59 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.popup-container {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* 투명한 흰 배경색 */
+  border-radius: 10px;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  background-color: #3498db; /* 파란색 */
+  color: white;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+input[type="radio"]:checked + label {
+  background-color: #2980b9; /* 더 진한 파란색 */
+}
+
+button {
+  background-color: #2ecc71; /* 녹색 */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #27ae60; /* 더 진한 녹색 */
+}
