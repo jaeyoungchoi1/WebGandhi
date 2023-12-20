@@ -17,7 +17,7 @@ async function callOpenAI(userText) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer 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' // 여기에 실제 API 키를 입력
+            'Authorization': 'Bearer "
         },
         body: JSON.stringify(data)
     });
