@@ -6,11 +6,14 @@
 </head>
 <body>
 <div class="popup-container">
-  <h1>WebGandhi</h1>
-  <p>This service is for filtering hate speeches on the web</p>
+  <div class="header">
+    <img src="images/icon48.png"/>
+    <h1>WebGandhi</h1>
+  </div>
+  <h3>This service is for filtering hate speeches on the web</h3>
 
   <div class="radio-group">
-    <input type="radio" id="neutral" name="filterType" checked>
+    <input type="radio" id="neutral" name="filterType">
     <label for="neutral">Neutral</label>
 
     <input type="radio" id="pure" name="filterType">
@@ -18,9 +21,9 @@
   </div>
 
   <button id="startButton">Start Filter</button>
+  <br/>
   <button id="resetButton">Reset</button>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
 <script src="popup.js"></script>
 </body>
 </html>

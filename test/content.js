@@ -1,40 +1,8 @@
-async function callOpenAI(userText) {
-    const data = {
-        model: "ft:gpt-3.5-turbo-1106:personal::8WEo6lug",
-        messages: [
-            {
-                role: "system",
-                content: "WebGandhi is a tool for filtering hate speech."
-            },
-            {
-                role: "user",
-                content: userText
-            }
-        ]
-    };
-
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer "
-        },
-        body: JSON.stringify(data)
-    });
-
-    const responseData = await response.json();
-    return responseData.choices[0].message.content.trim();
-}
-
-
-async function filterParagraphs() {
-    const paragraphs = document.querySelectorAll('.usertxt.ub-word');
-    for (let paragraph of paragraphs) {
-        const originalText = paragraph.textContent;
-        paragraph.originalText = originalText; // 원래 텍스트 저장
-        const filteredText = await callOpenAI(originalText);
-        paragraph.textContent = filteredText;
+function checkForElements() {
+    const elements = document.querySelectorAll('.usertxt.ub-word');
+    if (elements.length > 0) {
+        alert('[WebGandhi] Hate Speech Detected!');
     }
 }
 
-filterParagraphs();
+window.addEventListener('load', checkForElements);
